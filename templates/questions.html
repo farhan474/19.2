@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Madlibs Story Generator</title>
+</head>
+
+<body>
+	<h1>Madlibs</h1>
+	<form action="/story" method="post">
+		{% for prompt in prompts %}
+		<p>{{ prompt }}:
+			<input name="{{ prompt }}">
+		</p>
+		{% endfor %}
+		<button>Generate</button>
+	</form>
+</body>
+
+</html>
